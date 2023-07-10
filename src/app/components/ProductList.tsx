@@ -21,15 +21,15 @@ const ProductList: React.FC = () => {
   }, []);
 
   // Extract section names from shop items
-  const sectionNames = Array.from(new Set(shopItems.map((item) => item.section.name)));
+  const sectionNames = Array.from(new Set(shopItems.map((item: any) => item.section.name)));
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Fortnite Shop Items</h1>
-      {sectionNames.map((sectionName) => (
+      {sectionNames.map((sectionName: any) => (
         <Section key={sectionName} name={sectionName}>
           {shopItems
-            .filter((item) => item.section.name === sectionName)
+            .filter((item: any) => item.section.name === sectionName)
             .map((item) => (
               <ShopItem
                 key={item.itemId}
