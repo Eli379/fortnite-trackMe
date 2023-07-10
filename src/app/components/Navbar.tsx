@@ -10,7 +10,7 @@ const navigation = [
   { name: 'Wiper', href: '#', current: true }
 ]
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
 
