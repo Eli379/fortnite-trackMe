@@ -1,10 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import Modal from 'react-modal';
 import TrackModal from '../components/TrackModal';
-import { ExclamationTriangleIcon } from '@heroicons/react/outline';
-
 
 type Cosmetic = {
   name: string;
@@ -22,7 +19,7 @@ type Cosmetic = {
 
 const SearchCosmetic = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [cosmetic, setCosmetic] = useState<Cosmetic | null>(null);
+  const [cosmetic, setCosmetic] = useState<any | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isSearchComplete, setIsSearchComplete] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);

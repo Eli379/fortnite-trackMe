@@ -30,7 +30,7 @@ const ProductList: React.FC = () => {
         <Section key={sectionName} name={sectionName}>
           {shopItems
             .filter((item: any) => item.section.name === sectionName)
-            .map((item) => (
+            .map((item: any) => (
               <ShopItem
                 key={item.itemId}
                 name={item.bundle ? item.bundle.name : item.items[0].name}
