@@ -59,7 +59,7 @@ const TrackModal: React.FC<TrackModalProps> = ({ cosmeticId, isOpen, onClose }) 
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      We'll send you an email when this skin is available at the store!
+                      We&apos;ll send you an email when this skin is available at the store!
                     </p>
                   </div>
                 </div>
