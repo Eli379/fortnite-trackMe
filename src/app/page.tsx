@@ -14,7 +14,7 @@ export default function Home() {
         </h1>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:mb-0 lg:text-left">
         <a
           href="/tracker"
           rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export default function Home() {
         </a>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+      <div className="mb-32 grid text-center lg:mb-0 lg:text-left">
         <a
           href="/shop"
           rel="noopener noreferrer"

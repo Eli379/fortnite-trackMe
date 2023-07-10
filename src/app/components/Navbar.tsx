@@ -24,7 +24,7 @@ export default function Example() {
     <Disclosure>
       {({ open }) => (
         <>
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="mx-auto px-2 sm:px-6 lg:px-8 bg-gray-800">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
@@ -39,11 +39,6 @@ export default function Example() {
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
               <div className="flex flex-shrink-0 items-center">
-                <img
-                  className="hidden h-8 w-auto lg:block"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
-                />
               </div>
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
@@ -68,12 +63,12 @@ export default function Example() {
                 type="button"
                 className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
               >
-                <span className="sr-only">View notifications</span>
-                <BellIcon className="h-6 w-6" aria-hidden="true" />
+                {/* <span className="sr-only">View notifications</span>
+                <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
               </button>
 
               {/* Profile dropdown */}
-              <Menu as="div" className="relative ml-3">
+              {/* <Menu as="div" className="relative ml-3">
                 <div>
                   <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                     <span className="sr-only">Open user menu</span>
@@ -126,7 +121,7 @@ export default function Example() {
                     </Menu.Item>
                   </Menu.Items>
                 </Transition>
-              </Menu>
+              </Menu> */}
             </div>
           </div>
         </div>
