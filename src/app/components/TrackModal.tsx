@@ -3,23 +3,39 @@ import { Dialog, Transition } from '@headlessui/react';
 import { MailIcon } from '@heroicons/react/solid';
 
 type TrackModalProps = {
-  cosmeticId: string;
+  cosmeticName: string;
   isOpen: boolean;
   onClose: () => void;
 };
 
-const TrackModal: React.FC<TrackModalProps> = ({ cosmeticId, isOpen, onClose }) => {
+const TrackModal: React.FC<TrackModalProps> = ({ cosmeticName, isOpen, onClose }) => {
   const [email, setEmail] = useState('');
-
+  const password = "3791";
   const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Handle form submission here
-    console.log('Email:', email);
-    onClose();
+    try {
+      const response = await fetch('http://127.0.0.1:5000/addTracker', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, cosmeticName, password }),
+      });
+      if (response.ok) {
+        console.log('Track request successful');
+        onClose();
+      } else {
+        console.log('Track request failed');
+        // Handle error here
+      }
+    } catch (error) {
+      console.error('Track request error:', error);
+      // Handle error here
+    }
   };
 
   return (
@@ -59,7 +75,7 @@ const TrackModal: React.FC<TrackModalProps> = ({ cosmeticId, isOpen, onClose }) 
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      We&apos;ll send you an email when this skin is available at the store!
+                      We&apos;ll send you an email when the {cosmeticName} cosmetic is available at the store!
                     </p>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import { MenuIcon, BellIcon, XIcon } from '@heroicons/react/solid';
 const navigation = [
   { name: 'Cosmetic Tracker', href: '/tracker', current: true },
   { name: 'Shop', href: '/shop', current: true },
-  { name: 'Wiper', href: '#', current: true }
+  { name: 'Wiper', href: '/wiper', current: true }
 ]
 
 function classNames(...classes: any[]) {

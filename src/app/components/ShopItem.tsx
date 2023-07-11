@@ -10,7 +10,7 @@ interface ShopItemProps {
 
 const ShopItem: React.FC<ShopItemProps> = ({ name, image, rarity, cost, vbucksIconUrl }) => {
   return (
-    <div className="bg-white rounded-lg p-2 shadow cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-100">
+    <div className="bg-white dark:bg-gray-900 rounded-lg p-2 shadow cursor-pointer transition duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-100 dark:hover:bg-gray-500">
       <div className="relative group">
         <img src={image} alt={name} className="w-full h-32 object-contain mb-2" />
         <div className="absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"></div>

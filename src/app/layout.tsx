@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Fortnite Wishlist',
+  title: 'Fortnite TrackMe',
   description: 'Add a specific skin to your wishlist and get notified when it is in the shop.',
 }
 

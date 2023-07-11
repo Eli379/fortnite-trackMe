@@ -54,7 +54,7 @@ const SearchCosmetic = () => {
   };
 
   return (
-    <main className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 sm:p-8">
+    <main className="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
       <div className="max-w-md mx-auto">
         <h2 className="text-2xl font-bold text-center mb-4">
           Fortnite Cosmetics Search
@@ -68,7 +68,7 @@ const SearchCosmetic = () => {
         >
           <input
             type="text"
-            className="block w-full px-4 py-2 bg-white border rounded-l-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
+            className="block w-full px-4 py-2 bg-white dark:bg-gray-900 border rounded-l-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Enter cosmetic name"
@@ -87,7 +87,7 @@ const SearchCosmetic = () => {
         </form>
         {cosmetic && isSearchComplete ? (
           <div className="mt-4">
-            <div className="bg-white rounded-lg p-4 shadow cursor-pointer transition duration-300 ease-in-out transform hover:scale-101 hover:bg-gray-100">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-4 shadow cursor-pointer transition duration-300 ease-in-out transform hover:scale-101 hover:bg-gray-100 dark:hover:bg-gray-500">
               <div className="relative group">
                 <img
                   src={cosmetic.images.featured}
@@ -114,7 +114,7 @@ const SearchCosmetic = () => {
           <p className="mt-4 text-red-500">No cosmetics found.</p>
         ) : null}
         <TrackModal
-          cosmeticId={cosmetic?.id}
+          cosmeticName={cosmetic?.name}
           isOpen={isModalOpen}
           onClose={closeModal}
         />        
